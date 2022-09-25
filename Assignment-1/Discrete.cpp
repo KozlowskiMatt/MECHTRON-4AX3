@@ -40,15 +40,12 @@ int main()
     Y <<0,0;
 
     total_time = (velocity*sin(alpha*M_PI/180))/4.9;
-    position_file<<"\tTime\tPos_x\tPos_y"<<endl;
-    position_file<<"\t"<<t<<"\t"<<Y(0,0)<<"\t"<<Y(1,0)<<endl;
-
     while (t<total_time)
     {
+        position_file<<"\t"<<t<<"\t"<<Y(0,0)<<"\t"<<Y(1,0)<<endl;
         X = A*X +k;
         Y = C*X;
         t = t+h; //increment t by step size
-        position_file<<"\t"<<t<<"\t"<<Y(0,0)<<"\t"<<Y(1,0)<<endl;
     }
     return 0;
 }
