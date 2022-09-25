@@ -58,7 +58,7 @@ void solver(const Eigen::VectorXd &x0,double h,double time)
 int main(void)
 {
 	Eigen::VectorXd X(4,1);
-    double h, velocity, total_time, t,alpha;
+    double h, velocity, total_time, tz,alpha;
     velocity = 20; // Initial velocity = 20 m/s
     alpha = 60; // Launch angle = 60 deg
     h = 0.01;
