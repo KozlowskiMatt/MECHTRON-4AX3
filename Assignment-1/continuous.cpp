@@ -5,7 +5,7 @@
 using namespace std;
 
 /*
-    Continuous simuilation of a projectile using Runge-kutta technique
+    Continuous simulation of a projectile using Runge-kutta technique
 */
 
 Eigen::VectorXd calculate(double t,const Eigen::VectorXd &in)
@@ -26,7 +26,7 @@ Eigen::VectorXd calculate(double t,const Eigen::VectorXd &in)
 	return(out);
 }
 
-// Implemenation of the Runge-Kutta technique
+// Implementation of the Runge-Kutta technique
 Eigen::VectorXd Runge(double t, const Eigen::VectorXd &in, double h)
 {
         Eigen::VectorXd k1, k2, k3, k4;
