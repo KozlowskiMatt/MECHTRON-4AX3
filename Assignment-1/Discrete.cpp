@@ -3,7 +3,7 @@
 #include <eigen3/Eigen/Dense>
 #include <cmath>
 
-// Discrete representation
+// Discrete representation of a projectile
 
 using namespace std;
 
@@ -15,7 +15,7 @@ int main()
     Eigen::MatrixXd A(4,4); 
     Eigen::MatrixXd C(2,4);
     Eigen::MatrixXd k(4,1);
-    Eigen::MatrixXd X (4,1); // State vector of pos_x, vel_x, pos_y, vel_y
+    Eigen::MatrixXd X (4,1); // State vector for pos_x, vel_x, pos_y, vel_y
     Eigen::MatrixXd Y (2,1); // To store appropriate x and y coordinates
 
     ofstream position_file;
@@ -47,7 +47,6 @@ int main()
     {
         X = A*X +k;
         Y = C*X;
-        myfile<<"\t"<<t<<"\t"<<X(0,0)<<"\t"<<X(1,0)<<"\t"<<X(2,0)<<"\t"<<X(3,0)<<endl;
         t = t+h; //increment t by step size
         position_file<<"\t"<<t<<"\t"<<Y(0,0)<<"\t"<<Y(1,0)<<endl;
     }
