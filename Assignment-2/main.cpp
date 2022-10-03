@@ -3,7 +3,7 @@
 #include <eigen3/Eigen/Dense>
 
 #define INPUT_DATA "DATA.txt"
-#define OUTPUT_DATA "OUTPUT.txt"
+#define OUTPUT_DATA "OUTPUT_4.txt"
 #define SIZE_OF_DATA 2048
 
 using namespace std;
